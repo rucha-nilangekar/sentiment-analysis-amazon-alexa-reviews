@@ -33,7 +33,7 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     # Select the predictor to be loaded from Models folder
-    predictor = pickle.load(open(r"Models/models-upsample/model_xgb.pkl", "rb"))
+    predictor = pickle.load(open(r"Models/models-upsample/model_rf.pkl", "rb"))
     scaler = pickle.load(open(r"Models/models-upsample/scaler.pkl", "rb"))
     cv = pickle.load(open(r"Models/models-upsample/countVectorizer.pkl", "rb"))
     try:
